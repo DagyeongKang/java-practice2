@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.conditional.level02.normal;
 
+import java.util.Scanner;
+
 public class Application4 {
 
     public static void main(String[] args) {
@@ -9,5 +11,19 @@ public class Application4 {
          * 단, 1~10 사이의 정수가 아닌 경우 "반드시 1~10 사이의 정수를 입력해야 합니다." 를 출력하세요.
          * */
 
+        System.out.print("1~10 사이의 정수 한개를 입력해주세요 : ");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+
+        if (a >= 1 && a <= 10) {
+
+            if (a % 2 == 0) {
+                System.out.println("짝수다.");
+            } else {
+                System.out.println("홀수다.");
+            }
+        } else {
+            System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+        }
     }
 }

@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.conditional.level03;
 
+import java.util.Scanner;
+
 public class Application9 {
 
     public static void main(String[] args) {
@@ -13,6 +15,26 @@ public class Application9 {
             두 번째 숫자 : 4 	두 번째 숫자 : 8 	두 번째 숫자 : 0
             4 5 6 7 8 		4 5 6 7 8 		1 이상의 숫자를 입력해주세요.
        */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("첫 번째 숫자 : ");
+        int a = sc.nextInt();
+        System.out.print("두 번째 숫자 : ");
+        int b = sc.nextInt();
+
+        if (b <= a) {
+            while (b <= a) {
+                System.out.print(b);
+                System.out.print(" ");
+                b += 1;
+            }
+        } else {
+            while (a <= b) {
+                System.out.print(a);
+                System.out.print(" ");
+                a += 1;
+            }
+        }
+
 
     }
 }

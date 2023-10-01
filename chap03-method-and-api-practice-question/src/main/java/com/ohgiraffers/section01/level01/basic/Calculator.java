@@ -5,12 +5,19 @@ public class Calculator {
     // 반환값 : x
     // 메소드명 : checkMethod
     // 호출하면 "메소드 호출 확인"을 출력하는 기능의 메소드
-
+    public void checkMethod() {
+        System.out.println("메소드 호출 확인");
+    }
     // 반환값 : String
     // 메소드명 : sumTwoNumber
     // 두개의 전달인자를 받아 두수의 합을 반환
     // 출력의 내용은 "10과 20의 합은 30입니다." 라는 문장을
     // 출력하는 기능
+
+    public String sumTwoNumber(int a, int b) {
+        int c = a + b;
+        return a + "과 " + b + "의 합은 " + c + "입니다";
+    }
 
     // 반환값 : String
     // 메소드명 : multiTwoNumber
@@ -18,6 +25,10 @@ public class Calculator {
     // 출력의 내용은 "10과 20의 곱은 200입니다." 라는 문장을
     // 출력하는 기능
 
+    public String multiTwoNumber(int a, int b) {
+        int c = a * b;
+        return a + "과 " + b + "의 곱은 " + c + "입니다";
+    }
 
 
     // 반환값 : int
@@ -26,8 +37,9 @@ public class Calculator {
     // 출력의 내용은 "10과 20의 곱은 200입니다." 라는 문장을
     // 출력하는 기능
 
-    public void checkMethod(){
-        System.out.println("메소드 호출 확인");
+    public int multiTwoNumber2(int a, int b) {
+        int c = a * b;
+        return c;
     }
 
 

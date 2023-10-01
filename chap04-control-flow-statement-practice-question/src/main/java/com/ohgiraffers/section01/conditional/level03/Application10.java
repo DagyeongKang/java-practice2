@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.conditional.level03;
 
+import java.util.Scanner;
+
 public class Application10 {
 
     public static void main(String[] args) {
@@ -30,5 +32,57 @@ public class Application10 {
                 없는 연산자입니다. 다시 입력해주세요.
 	   */
 
+        Application10 a = new Application10();
+        a.first();
+    }
+
+    public void first() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("연산자 : ");
+        String c = sc.nextLine();
+        System.out.print("정수 1 : ");
+        int a = sc.nextInt();
+        System.out.print("정수 2 : ");
+        int b = sc.nextInt();
+
+
+        switch (c) {
+            case "+":
+                System.out.println(a + "+" + b + "=" + (a + b));
+                break;
+            case "-":
+                System.out.println(a + "-" + b + "=" + (a - b));
+                break;
+            case "/":
+                if (b == 0) {
+                    System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+                    Application10 sec = new Application10();
+                    sec.second();
+                }
+                System.out.println(a + "/" + b + "=" + (a / b));
+                break;
+            case "*":
+                System.out.println(a + "*" + b + "=" + (a * b));
+                break;
+            case "%":
+                System.out.println(a + "%" + b + "=" + (a % b));
+                break;
+            case "exit":
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            default:
+                System.out.println("없는 연산자 입니다. 다시 입력해주세요.");
+                Application10 sec = new Application10();
+                sec.second();
+
+        }
+
+
+    }
+
+    public void second() {
+        Application10 a = new Application10();
+        a.first();
     }
 }

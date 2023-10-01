@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.conditional.level03;
 
+import java.util.Scanner;
+
 public class Application5 {
 
     public static void main(String[] args) {
@@ -13,6 +15,19 @@ public class Application5 {
             1이상의 숫자를 입력하세요 : 4			1 이상의 숫자를 입력하세요 : 0
             1 2 3 4 					        1 이상의 숫자를 입력해주세요.
         */
+
+        System.out.print("1 이상의 숫자를 입력하세요 : ");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        if (a >= 1) {
+            for (int i = 1; i <= a; i++) {
+                System.out.print(i);
+                System.out.print(" ");
+            }
+        } else {
+            System.out.println("1 이상의 숫자를 입력해주세요");
+        }
+
 
     }
 }
